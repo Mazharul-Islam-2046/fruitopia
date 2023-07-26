@@ -18,13 +18,14 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
 
 		<style>
 			body {
-				font-family: "Lato", sans-serif;
+				font-family: "Montserrat", sans-serif;
+				font-family: "Poppins", sans-serif;
 			}
 		</style>
 
@@ -46,7 +47,8 @@
 						},
 
 						fontFamily: {
-							"primary-font": "Lato",
+							"primary-font": "Montserrat",
+							"secondary-font": "Poppins",
 						},
 					},
 				},
@@ -54,12 +56,43 @@
 		</script>
 	</head>
 	<body>
-		<header>
-			<nav class="max-w-screen-xl mx-auto my-2 py-2 px-10 bg-primary-color rounded-full">
-				<div class="navbar flex justify-between items-center">
-					<div class="navbar-start">
+		<header class="max-w-screen-xl mx-auto my-2 py-2 px-4 lg:px-12">
+			<!-- Navbar -->
+			<nav
+				class="max-w-screen-xl mx-auto my-2 py-2 px-10 bg-primary-color rounded-full"
+			>
+				<div
+					class="navbar flex flex-row justify-between items-center lg:flex-row-reverse"
+				>
+					<!-- Nav SearchBar -->
+					<div class="navbar-end hidden lg:flex">
+						<div
+							class="flex border rounded-full items-center bg-slate-100 pr-6"
+						>
+							<input
+								type="text"
+								placeholder="Search here"
+								class="input border-none w-full md:w-auto"
+							/>
+							<i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+						</div>
+					</div>
 
-                        <!-- Navbar Menus Mobile -->
+					<!-- Navbar Logo -->
+					<div
+						class="navbar-end flex justify-center items-center lg:navbar-center"
+					>
+						<a class="btn btn-ghost normal-case text-xl mr-4"
+							><img class="w-10" src="./images/logo.png" alt="" />
+							<h2 class="text-xl text-white font-primary-font lg:text-3xl">
+								Fruitopia
+							</h2>
+						</a>
+					</div>
+
+					<!-- Nab Menus -->
+					<div class="navbar-end">
+						<!-- Navbar Menus Mobile -->
 						<div class="dropdown">
 							<label tabindex="0" class="btn btn-ghost btn-circle lg:hidden">
 								<svg
@@ -81,52 +114,151 @@
 								tabindex="0"
 								class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 							>
-								<li><a>Homepage</a></li>
-								<li><a>Portfolio</a></li>
-								<li><a>About</a></li>
+								<li><a>Home</a></li>
+								<li><a>About Us</a></li>
+								<li><a>Shop</a></li>
+								<li><a>All Fruits</a></li>
 							</ul>
 						</div>
 
-                        <!-- Navbar Menus Desktop -->
+						<!-- Navbar Menus Desktop -->
 						<div class="navbar-center hidden lg:flex">
-							<ul class="menu menu-horizontal px-1 pt-3 text-white font-medium text-lg">
-								<li><a>Item 1</a></li>
-								<li tabindex="0">
-									<details>
-										<summary>Parent</summary>
-										<ul class="p-2">
-											<li><a>Submenu 1</a></li>
-											<li><a>Submenu 2</a></li>
-										</ul>
-									</details>
-								</li>
-								<li><a>Item 3</a></li>
+							<ul
+								class="menu menu-horizontal px-1 pt-3 text-white font-medium text-lg"
+							>
+								<li><a>Home</a></li>
+								<li><a>About Us</a></li>
+								<li><a>Shop</a></li>
+								<li><a>All Fruits</a></li>
 							</ul>
-						</div>
-					</div>
-
-                    <!-- Navbar Logo -->
-					<div class="navbar-center flex justify-center items-center">
-						<a class="btn btn-ghost normal-case text-xl mr-4"><img class="w-10" src="./images/logo.png" alt="">
-                        <h2 class="text-xl text-white font-primary-font  lg:text-3xl">Fruitopia</h2>
-                        </a>
-					</div>
-
-                    <!-- Nav SearchBar -->
-					<div class="navbar-end">
-						<div class="form-control">
-							<input
-								type="text"
-								placeholder="Search here"
-								class="input input-bordered w-24 md:w-auto"
-							/>
 						</div>
 					</div>
 				</div>
 			</nav>
+
+			<!-- Hero Section -->
+			<section class="max-w-screen-xl mx-auto my-2 py-2">
+				<div class="flex flex-col justify-center items-center relative">
+					<!-- Carousel Part -->
+					<div class="carousel w-full h-[40vh] md:h-auto">
+
+						<!-- Slide 1 -->
+						<div id="slide1" class="carousel-item relative w-full">
+							<img
+								src="/images/banner1.png"
+								class="w-full -z-20"
+							/>
+							<div
+								class="absolute flex justify-between transform -translate-y-1/2 -left-1 -right-1 top-1/2 lg:left-5 lg:right-5"
+							>
+								<a href="#slide4" class="btn btn-circle">❮</a>
+								<a href="#slide2" class="btn btn-circle">❯</a>
+							</div>
+
+							<!-- Overlay -->
+							<div class="flex flex-col justify-center items-center bg-black bg-opacity-50 absolute top-0 left-0 h-full w-full -z-10 lg:justify-start lg:pt-16">
+								<h1 class="text-white text-2xl text-center font-extrabold font-primary-font lg:text-6xl">Exotic tastes at your <br> doorstep</h1>
+								<p class="text-white text-sm text-center font-medium font-secondary-font mt-1 mb-2 lg:text-lg lg:mt-6 lg:mb-10">We supply highly quality organic products</p>
+								<button class="btn rounded-xl bg-primary-color border-none text-white cursor-pointer">Shop Now</button>
+							</div>
+						</div>
+
+						<!-- Slide 2 -->
+						<div id="slide2" class="carousel-item relative w-full">
+							<img
+								src="/images/banner2.png"
+								class="w-full -z-20"
+							/>
+							<div
+								class="absolute flex justify-between transform -translate-y-1/2 -left-1 -right-1 top-1/2 lg:left-5 lg:right-5"
+							>
+								<a href="#slide1" class="btn btn-circle">❮</a>
+								<a href="#slide3" class="btn btn-circle">❯</a>
+							</div>
+
+							<!-- Overlay -->
+							<div class="flex flex-col justify-center items-center bg-black bg-opacity-50 absolute top-0 left-0 h-full w-full -z-10 lg:justify-start lg:pt-16">
+								<h1 class="text-white text-2xl text-center font-extrabold font-primary-font lg:text-6xl">Exotic tastes at your <br> doorstep</h1>
+								<p class="text-white text-sm text-center font-medium font-secondary-font mt-1 mb-2 lg:text-lg lg:mt-6 lg:mb-10">We supply highly quality organic products</p>
+								<button class="btn rounded-xl bg-primary-color border-none text-white cursor-pointer">Shop Now</button>
+							</div>
+						</div>
+
+						<!-- Slide 3 -->
+						<div id="slide3" class="carousel-item relative w-full">
+							<img
+								src="/images/banner3.png"
+								class="w-full -z-20"
+							/>
+							<div
+								class="absolute flex justify-between transform -translate-y-1/2 -left-1 -right-1 top-1/2 lg:left-5 lg:right-5"
+							>
+								<a href="#slide2" class="btn btn-circle">❮</a>
+								<a href="#slide4" class="btn btn-circle">❯</a>
+							</div>
+
+							<!-- Overlay -->
+							<div class="flex flex-col justify-center items-center bg-black bg-opacity-50 absolute top-0 left-0 h-full w-full -z-10 lg:justify-start lg:pt-16">
+								<h1 class="text-white text-2xl text-center font-extrabold font-primary-font lg:text-6xl">Exotic tastes at your <br> doorstep</h1>
+								<p class="text-white text-sm text-center font-medium font-secondary-font mt-1 mb-2 lg:text-lg lg:mt-6 lg:mb-10">We supply highly quality organic products</p>
+								<button class="btn rounded-xl bg-primary-color border-none text-white cursor-pointer">Shop Now</button>
+							</div>
+						</div>
+
+						<!-- Slide 4 -->
+						<div id="slide4" class="carousel-item relative w-full">
+							<img
+								src="/images/banner4.png"
+								class="w-full -z-20"
+							/>
+							<div
+								class="absolute flex justify-between transform -translate-y-1/2 -left-1 -right-1 top-1/2 lg:left-5 lg:right-5"
+							>
+								<a href="#slide3" class="btn btn-circle">❮</a>
+								<a href="#slide1" class="btn btn-circle">❯</a>
+							</div>
+
+							<!-- Overlay -->
+							<div class="flex flex-col justify-center items-center bg-black bg-opacity-50 absolute top-0 left-0 h-full w-full -z-10 lg:justify-start lg:pt-16">
+								<h1 class="text-white text-2xl text-center font-extrabold font-primary-font lg:text-6xl">Exotic tastes at your <br> doorstep</h1>
+								<p class="text-white text-sm text-center font-medium font-secondary-font mt-1 mb-2 lg:text-lg lg:mt-6 lg:mb-10">We supply highly quality organic products</p>
+								<button class="btn rounded-xl bg-primary-color border-none text-white cursor-pointer">Shop Now</button>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- Bonus Part -->
+					<div class="px-8 py-6 rounded-sm shadow-sm absolute -bottom-16 bg-[#faf7f5] hidden lg:grid lg:grid-cols-5 lg:gap-4">
+						<div class="flex flex-col justify-between items-center">
+							<img class="w-3/5" src="./images/fruit1.png" alt="">
+							<h3 class="text-slate-700">Strawberry</h3>
+						</div>
+						<div class="flex flex-col justify-between items-center">
+							<img class="w-3/5" src="./images/fruit2.png" alt="">
+							<h3 class="text-slate-700">Orange</h3>
+						</div>
+						<div class="flex flex-col justify-between items-center">
+							<img class="w-4/5" src="./images/fruit3.png" alt="">
+							<h3 class="text-slate-700">Mango</h3>
+						</div>
+						<div class="flex flex-col justify-between items-center">
+							<img class="w-4/5" src="./images/fruit4.png" alt="">
+							<h3 class="text-slate-700">Strawberry</h3>
+						</div>
+						<div class="flex flex-col justify-between items-center">
+							<img class="w-4/5" src="./images/fruit5.png" alt="">
+							<h3 class="text-slate-700">Mango</h3>
+						</div>
+					</div>
+				</div>
+				<div></div>
+			</section>
 		</header>
 
-		<main></main>
+		<main>
+			
+		</main>
 
 		<footer></footer>
 	</body>
